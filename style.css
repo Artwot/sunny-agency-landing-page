@@ -129,7 +129,7 @@ body {
   /* flex: 1; */
   flex-basis: 50%;
   min-width: 50%;
-  min-height: 600px;
+  height: 50vw;
 }
 
 .card-info {
@@ -147,7 +147,6 @@ body {
 }
 
 .card-title {
-  padding-right: 10rem;
   font-size: 3vw;
   font-weight: 900;
 }
@@ -187,21 +186,6 @@ body {
   opacity: 0.5;
   z-index: -1;
 }
-
-/* .learn-more-button:hover::after {
-  opacity: 1;
-} */
-
-/* #btn-1,
-#btn-2 {
-  width: 135px;
-  height: 7px;
-  border-radius: 5rem;
-  position: relative;
-  top: -5px;
-  opacity: 0.5;
-  z-index: -1;
-} */
 
 #btn-1::after {
   background-color: var(--yellow);
@@ -243,17 +227,19 @@ body {
 .card-image-info {
   display: flex;
   flex-direction: column;
-  padding: 27rem 8.5rem 5rem 8.5rem;
+  padding: 33% 9% 0 9%;
 }
 
+/* Title of the cards */
 .card-image-info h4 {
-  font-size: 32px;
+  font-size: 3vw;
   text-align: center;
   margin-bottom: 2rem;
 }
 
 .card-image-info p {
   font-family: "Barlow", sans-serif;
+  font-size: 1.4vw;
   font-weight: lighter;
   text-align: center;
 }
@@ -278,12 +264,13 @@ body {
   color: var(--dark-blue);
 }
 
-/* Client Testimonials */
+/* Client Testimonials container */
 .client-testimonials {
-  /* height: 100vh; */
-  margin: 10rem 8rem;
+  /* height: 90vh; */
+  margin: 10rem 5rem;
 }
 
+/* "Client Testimonials" */
 .client-title {
   text-transform: uppercase;
   font-weight: 900;
@@ -298,15 +285,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  align-items: baseline;
 }
 
 .client-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: space-between; */
-  flex: 1 1 50%;
-  margin: 0 1rem;
+  flex: 1;
+  margin: 0 0.5rem;
 }
 
 .client-profile-pic {
@@ -320,6 +307,7 @@ body {
   font-family: "Barlow", sans-serif;
   color: var(--very-dark-grayish-blue);
   text-align: center;
+  font-size: 1.4vw;
   margin-bottom: 3rem;
 }
 
@@ -332,3 +320,56 @@ body {
   color: var(--grayish-blue);
   font-family: "Barlow", sans-serif;
 }
+
+/* Bottom images container */
+.images-container {
+  width: 100vw;
+  height: 35vw;
+  background-color: tomato;
+  display: flex;
+}
+
+/* Position of the background images */
+#image-1,
+#image-2,
+#image-3,
+#image-4 {
+  flex: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#image-1 {
+  background-image: url("images/desktop/image-gallery-milkbottles.jpg");
+}
+
+#image-2 {
+  background-image: url("images/desktop/image-gallery-orange.jpg");
+}
+
+#image-3 {
+  background-image: url("images/desktop/image-gallery-cone.jpg");
+}
+
+#image-4 {
+  background-image: url("images/desktop/image-gallery-sugarcubes.jpg");
+}
+
+/* Footer */
+.footer {
+  background-color: #90d4c5;
+  color: var(--dark-moderate-cyan);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 3rem 0;
+}
+
+.footer-brand svg{
+  cursor: pointer;
+  fill: aqua;
+}
+
+
