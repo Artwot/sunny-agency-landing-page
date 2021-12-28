@@ -33,7 +33,7 @@ html,
 body {
   /* font-family: "Open Sans", sans-serif; */
   font-family: "Fraunces", serif;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 /* Intro container */
@@ -126,13 +126,15 @@ body {
 .card-info,
 .card-img,
 .card-image-info {
-  flex: 1;
+  /* flex: 1; */
   flex-basis: 50%;
+  min-width: 50%;
+  min-height: 600px;
 }
 
 .card-info {
-  padding: 5rem;
-  padding-left: 8rem;
+  padding: calc(100% - 95%);
+  padding-left: calc(100% - 92%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -146,19 +148,16 @@ body {
 
 .card-title {
   padding-right: 10rem;
+  font-size: 3vw;
   font-weight: 900;
 }
 
 .card-text {
   font-family: "Barlow", sans-serif;
   line-height: 1.5rem;
+  font-size: 1.5vw;
   color: var(--grayish-blue);
   padding-right: 2.5rem;
-}
-
-.card-img,
-.card-image-info {
-  aspect-ratio: 1/1;
 }
 
 /* Button "Learn More" */
@@ -166,7 +165,7 @@ body {
   align-self: flex-start;
   font-family: "Fraunces", sans-serif;
   font-weight: 900;
-  font-size: 14px;
+  font-size: 0.875rem;
   text-transform: uppercase;
   border: none;
   background-color: rgba(255, 255, 255, 0);
@@ -176,34 +175,47 @@ body {
 }
 
 /* Underline in the "LEARN MORE" button */
-#btn-1,
+.learn-more-button::after {
+  display: block;
+  content: "";
+  width: 110%;
+  height: 10px;
+  border-radius: 5rem;
+  position: relative;
+  top: -7px;
+  left: -5%;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+/* .learn-more-button:hover::after {
+  opacity: 1;
+} */
+
+/* #btn-1,
 #btn-2 {
   width: 135px;
   height: 7px;
   border-radius: 5rem;
   position: relative;
   top: -5px;
-  /* opacity: 0.5; */
+  opacity: 0.5;
   z-index: -1;
-}
-
-#btn-1 {
-  background-color: #fdf0c0;
-}
-
-/* .button-1:hover span {
-  background-color: var(--yellow);
-  cursor: pointer;
-  opacity: 1;
 } */
 
-#btn-2 {
-  background-color: #fcd9d0;
+#btn-1::after {
+  background-color: var(--yellow);
 }
 
-#btn-2:hover {
+#btn-1:hover::after {
+  opacity: 1;
+}
+
+#btn-2::after {
   background-color: var(--soft-red);
-  cursor: pointer;
+}
+
+#btn-2:hover::after {
   opacity: 1;
 }
 
@@ -227,7 +239,7 @@ body {
   background-size: cover;
 }
 
-/* "Graphic design" & "Photography" Cards */
+/* "Graphic design" & "Photography" Cards  */
 .card-image-info {
   display: flex;
   flex-direction: column;
@@ -264,4 +276,59 @@ body {
 #card-title-2,
 #card-text-2 {
   color: var(--dark-blue);
+}
+
+/* Client Testimonials */
+.client-testimonials {
+  /* height: 100vh; */
+  margin: 10rem 8rem;
+}
+
+.client-title {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  color: var(--grayish-blue);
+  margin-bottom: 4rem;
+}
+
+.client-cards-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.client-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-between; */
+  flex: 1 1 50%;
+  margin: 0 1rem;
+}
+
+.client-profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 3rem;
+}
+
+.client-opinion {
+  font-family: "Barlow", sans-serif;
+  color: var(--very-dark-grayish-blue);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.client-name {
+  margin-bottom: 1rem;
+}
+
+.client-role {
+  font-size: 12px;
+  color: var(--grayish-blue);
+  font-family: "Barlow", sans-serif;
 }
