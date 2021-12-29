@@ -111,11 +111,16 @@ body {
   letter-spacing: 0.5rem;
 }
 
+.arrow {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .arrow img {
   margin-top: 7rem;
   height: 150px;
-  position: relative;
-  left: 50%;
 }
 
 /* Cards with "transform & "stand out" info */
@@ -323,7 +328,7 @@ body {
 
 /* Bottom images container */
 .images-container {
-  width: 100vw;
+  width: 100%;
   height: 35vw;
   background-color: tomato;
   display: flex;
@@ -367,9 +372,56 @@ body {
   padding: 3rem 0;
 }
 
-.footer-brand svg{
+/* Sunnyside logo */
+.footer-brand {
   cursor: pointer;
-  fill: aqua;
+  margin-bottom: 1.5rem;
 }
 
+/* Footer links */
+.footer-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.footer-link {
+  margin-right: 1.3rem;
+  margin-bottom: 3rem;
+}
+
+/* Link item */
+.footer-link a,
+.footer-icons a {
+  text-decoration: none;
+  font-family: "Barlow", sans-serif;
+  color: var(--dark-moderate-cyan);
+}
+
+.footer-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-icons a {
+  margin-right: 0.8rem;
+}
+
+.footer-link:hover a,
+.social-icon:hover {
+  color: var(--white);
+}
+
+/* Attribution */
+.attribution {
+  width: 100%;
+  font-size: 11px;
+  text-align: center;
+  background-color: #90d4c5;
+  color: var(--dark-moderate-cyan);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
