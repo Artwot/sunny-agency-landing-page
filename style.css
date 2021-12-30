@@ -99,6 +99,10 @@ body {
   background-color: rgba(255, 255, 255, 0.4);
 }
 
+.hamburguer-menu {
+  display: none;
+}
+
 /* Home Title */
 .title {
   margin-top: 5rem;
@@ -257,7 +261,7 @@ body {
   background-image: url("images/desktop/image-photography.jpg");
 }
 
-/* Title and paragraph for the "Graphic design card" */
+/* Color title and paragraph for the "Graphic design card" */
 #card-title-1,
 #card-text-1 {
   color: var(--dark-desaturated-cyan);
@@ -387,7 +391,7 @@ body {
 }
 
 .footer-link {
-  margin-right: 1.3rem;
+  margin: 0 0.5rem;
   margin-bottom: 3rem;
 }
 
@@ -421,7 +425,203 @@ body {
   text-align: center;
   background-color: #90d4c5;
   color: var(--dark-moderate-cyan);
+  padding-bottom: 0.5rem;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* Responsive-CSS */
+@media (max-width: 768px) {
+  /* Hide the navbar  */
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-container {
+    padding: 2.3rem 1.5rem;
+  }
+
+  .navbar-logo img {
+    width: 120px;
+  }
+
+  .title {
+    /* margin-top: 2rem; */
+    font-size: 2rem;
+  }
+
+  .arrow img {
+    margin-top: 5rem;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .card-info {
+    padding: 1.8rem 1rem 1.5rem;
+    /* justify-content: center; */
+    /* align-items: center; */
+    flex-basis: auto;
+    height: 110vw;
+  }
+
+  .card-title,
+  .card-text {
+    margin-bottom: 1.5rem;
+  }
+
+  .card-title {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  .card-text {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0;
+  }
+
+  .learn-more-button {
+    align-self: center;
+    font-size: 0.73rem;
+  }
+
+  .card-img {
+    flex-basis: auto;
+    height: 80vw;
+  }
+
+  #img1,
+  #img2 {
+    order: -1;
+  }
+
+  .card-image-info {
+    height: 130vw;
+    flex-basis: auto;
+    padding-top: 80%;
+  }
+
+  .card-image-info h4 {
+    font-size: 1.36rem;
+  }
+
+  .card-image-info p {
+    font-size: 0.75rem;
+  }
+
+  /* "Client Testimonials" */
+  .client-testimonials {
+    margin: 2rem 1rem;
+  }
+
+  .client-title {
+    font-size: 0.9rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .client-cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .client-card {
+    margin-bottom: 2.5rem;
+  }
+
+  .client-opinion {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+  }
+
+  .client-profile-pic {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Bottom images container */
+  .images-container {
+    flex-wrap: wrap;
+    height: 100vw;
+  }
+
+  #image-1,
+  #image-2,
+  #image-3,
+  #image-4 {
+    flex: auto;
+    width: 50vw;
+    height: 50%;
+  }
+
+  /* Hamburguer menu */
+  .hamburguer-menu {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    display: block;
+  }
+
+  .hamburguer-top,
+  .hamburguer-middle,
+  .hamburguer-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .hamburguer-middle {
+    transform: translateY(7px);
+  }
+
+  .hamburguer-bottom {
+    transform: translateY(14px);
+  }
+
+  /* Mobile menu */
+  .mobile-menu {
+    width: 90%;
+    height: 35%;
+    padding: 1rem 0;
+    position: fixed;
+    right: calc(100% - 95%);
+    background-color: var(--white);
+    font-size: 1rem;
+    font-family: "Barlow", sans-serif;
+  }
+
+  .mb-menu-links {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+  }
+
+  .mb-list-items a {
+    text-decoration: none;
+    color: var(--dark-grayish-blue);
+  }
+
+  .mb-list-items button {
+    background-color: var(--yellow);
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    font-family: serif;
+    font-family: "Fraunces", serif;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
 }
