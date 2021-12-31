@@ -103,6 +103,10 @@ body {
   display: none;
 }
 
+.mobile-menu {
+  display: none;
+}
+
 /* Home Title */
 .title {
   margin-top: 5rem;
@@ -432,7 +436,9 @@ body {
   color: hsl(228, 45%, 44%);
 }
 
+/* ****************************************************** */
 /* Responsive-CSS */
+/* ****************************************************** */
 @media (max-width: 768px) {
   /* Hide the navbar  */
   .navbar-links {
@@ -447,6 +453,7 @@ body {
     width: 120px;
   }
 
+  /* Main title */
   .title {
     /* margin-top: 2rem; */
     font-size: 2rem;
@@ -456,6 +463,7 @@ body {
     margin-top: 5rem;
   }
 
+  /* Cards */
   .card {
     flex-direction: column;
   }
@@ -494,6 +502,7 @@ body {
     height: 80vw;
   }
 
+  /* Invert the order of images */
   #img1,
   #img2 {
     order: -1;
@@ -590,14 +599,39 @@ body {
 
   /* Mobile menu */
   .mobile-menu {
-    width: 90%;
+    width: 87%;
     height: 35%;
     padding: 1rem 0;
     position: fixed;
-    right: calc(100% - 95%);
+    right: calc(100% - 93%);
     background-color: var(--white);
     font-size: 1rem;
     font-family: "Barlow", sans-serif;
+    display: inline-block;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s linear;
+  }
+
+  /* Mobile menu visible */
+  .mobile-menu.active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  /* For the little triangle above the mobile menu */
+  .mobile-menu::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-top: 15px solid transparent;
+    border-right: 15px solid var(--white);
+    border-bottom: 15px solid var(--white);
+    /* background-color: var(--white); */
+    position: absolute;
+    top: -30px;
+    right: 0;
   }
 
   .mb-menu-links {
